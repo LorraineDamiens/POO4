@@ -2,7 +2,7 @@
 
 require_once 'Vehicle.php';
 
-class Car extends Vehicle implements RechargeableInterface
+class Car extends Vehicle implements LightableInterface
 {
     const ALLOWED_ENERGIES = [
         ‘fuel’,
@@ -24,6 +24,14 @@ class Car extends Vehicle implements RechargeableInterface
         $this->energy = $energy;
     }
 
+    public function switchOn()
+    {
+        $this->lights = true;
+    }
+    public function switchOff()
+    {
+        $this->lights = false;
+    }
 
     public function getEnergy(): string
     {

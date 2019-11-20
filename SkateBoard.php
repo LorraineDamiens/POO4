@@ -2,7 +2,7 @@
 
 require_once 'Vehicle.php';
 
-class SkateBoard
+class SkateBoard extends Vehicle
 {
 
 }
